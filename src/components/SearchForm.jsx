@@ -1,8 +1,7 @@
 import React from "react";
 import { FiSearch } from "react-icons/fi";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { setItems } from "../Redux/slices/cardSlice";
 import { setCategory, setSortType } from "../Redux/slices/filterSlice";
 import { setSearchValue } from "../Redux/slices/searchSlice";
 

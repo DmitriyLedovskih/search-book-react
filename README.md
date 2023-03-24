@@ -12,6 +12,6 @@
 ![Redux Toolkit](https://img.shields.io/badge/Redux&nbsp;Toolkit-333?style=for-the-badge&logo=redux&logoColor=7549bc)
 ![Bem](https://img.shields.io/badge/-Бэм-333?style=for-the-badge&logo=bem&logoColor=fff)
 
-Планы:
+## Планы:
 
 - [ ] Исправить баги в коде

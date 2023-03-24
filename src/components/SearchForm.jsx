@@ -1,14 +1,15 @@
 import React from "react";
 import { FiSearch } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { setItems } from "../Redux/slices/cardSlice";
 import { setCategory, setSortType } from "../Redux/slices/filterSlice";
-import { getSearchValue, setSearchValue } from "../Redux/slices/searchSlice";
+import { setSearchValue } from "../Redux/slices/searchSlice";
 
 function SearchForm() {
-  const value = useSelector((state) => state.search.value);
-  const sortType = useSelector((state) => state.filter.sortType);
   const dispatch = useDispatch();
   const inputRef = React.useRef();
+  const navigate = useNavigate();
   const catagoryArray = [
     "all",
     "art",
@@ -19,9 +20,12 @@ function SearchForm() {
     "poetry",
   ];
 
+  const sortArray = ["relevance", "newest"];
+
   function submitForm(evt) {
     evt.preventDefault();
     dispatch(setSearchValue(inputRef.current.value));
+    navigate("/");
   }
   return (
     <form className="search-form" onSubmit={submitForm}>
@@ -37,9 +41,9 @@ function SearchForm() {
         </button>
       </label>
       <label className="search-form__label">
-        <span className="search-form__text">Категории</span>
+        <span className="search-form__text">Categories</span>
         <select
-          name=""
+          name="categories-select"
           className="search-form__element"
           onChange={(evt) => dispatch(setCategory(evt.target.value))}
         >
@@ -51,14 +55,17 @@ function SearchForm() {
         </select>
       </label>
       <label className="search-form__label">
-        <span className="search-form__text">Сортировать по</span>
+        <span className="search-form__text">Sorting by</span>
         <select
-          name=""
+          name="sort-select"
           className="search-form__element"
           onChange={(evt) => dispatch(setSortType(evt.target.value))}
         >
-          <option value="relevance">relevance</option>
-          <option value="newest">newest</option>
+          {sortArray.map((sort, index) => (
+            <option value={sort} key={index}>
+              {sort}
+            </option>
+          ))}
         </select>
       </label>
     </form>

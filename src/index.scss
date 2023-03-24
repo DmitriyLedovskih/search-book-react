@@ -12,6 +12,7 @@ body {
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
+  padding: 0 15px;
 }
 
 .logo {
@@ -27,10 +28,19 @@ body {
   outline: none;
   font-family: inherit;
   cursor: pointer;
+  text-decoration: none;
+  transition: all .4s ease-in-out;
+  &_type_outline {
+    border-color: #c5c5c5;
+    color: #03010f;
+    &:hover {
+      background-color: #c5c5c5;
+    }
+  }
 }
 
 .header {
-  background: url('https://kartinkin.net/uploads/posts/2022-02/1646017223_50-kartinkin-net-p-stopka-knig-kartinki-57.jpg') no-repeat center/cover;
+  background: url('./assets/images/header-bg.jpg') no-repeat center/cover;
   min-height: 250px;
   position: relative;
   z-index: 1;
@@ -66,8 +76,9 @@ body {
   &__label {
     position: relative;
     display: flex;
-    gap: 10px;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
     &:first-of-type {
       grid-column: 1/-1;
     }
@@ -76,7 +87,6 @@ body {
     color: #fff;
     font-size: 14px;
     line-height: 16px;
-    white-space: nowrap;
   }
   &__element {
     width: 100%;
@@ -99,6 +109,9 @@ body {
       height: 100%;
     }
   }
+  @media screen and (max-width: 340px) {
+    min-width: 100%;
+  }
 }
 
 .cards {
@@ -113,19 +126,42 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    @media screen and (max-width: 1300px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (max-width: 812px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 542px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__more {
+    margin: 20px auto 0;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 18px;
+    width: 100%;
   }
 }
 
 .card {
   background-color: #ccc;
   box-sizing: border-box;
-  padding: 30px 20px 15px;
-  display: flex;
-  flex-direction: column;
+  padding: 30px 20px 15px;  
   border-radius: 8px;
-  gap: 15px;
+  &__link {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-decoration: none;
+    height: 100%;
+  }
   &__image {
     object-fit: cover;
+    width: 130px;
+    height: 180px;
     margin: 0 auto;
   }
   &__content {
@@ -136,6 +172,9 @@ body {
   }
   &__category {
     color: #616161;
+    text-decoration: underline;
+    font-size: 16px;
+    line-height: 18px;
   }
   &__title {
     font-size: 16px;
@@ -153,6 +192,88 @@ body {
   }
   &__author {
     color: #616161;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.book-page {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  &__preview {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 795px) {
+      background-color: #ccc;
+    }
+  }
+  &__image {
+    width: 130px;
+    height: 180px;
+    object-fit: cover;
+  }
+  &__content {
+    padding: 30px;
+    height: 100%;
+    @media screen and (max-width: 795px) {
+      padding: 15px 0;
+    }
+  }
+  &__category {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 18px;
+    color: #616161;
+  }
+  &__title {
+    color: #03010f;
+    font-size: 24px;
+    line-height: 26px;
+    margin: 15px 0;
+  }
+  &__authors {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+    padding: 0;
+  }
+  &__author {
+    color: #616161;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  &__descr {
+    margin: 30px 0;
+    font-size: 16px;
+    line-height: 21px;
+    color: #03010f;
+    @media screen and (max-width: 795px) {
+      margin: 15px 0;
+    }
+  }
+  @media screen and (max-width: 795px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.not-found {
+  text-align: center;
+  padding: 30px 0;
+  &__title {
+    margin: 0 0 20px;
+    font-size: 32px;
+    line-height: 36px;
+    color: #03010f;
+  }
+  &__button {
+    padding: 10px 20px;
     font-size: 16px;
     line-height: 18px;
   }

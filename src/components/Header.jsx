@@ -8,7 +8,7 @@ function Header() {
       <div className="container">
         <div className="header__row">
           <Link to="/" className="logo header__logo">
-            Поиск книг
+            Search for books
           </Link>
           <SearchForm />
         </div>

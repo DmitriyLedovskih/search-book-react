@@ -212,9 +212,7 @@ body {
     display: flex;
     justify-content: center;
     border-radius: 5px;
-    @media screen and (max-width: 795px) {
-      background-color: $lightGrayColor;
-    }
+    background-color: $lightGrayColor;
   }
   &__image {
     width: 130px;

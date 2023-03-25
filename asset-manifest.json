@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/search-book-react/static/css/main.3c5af319.css",
+    "main.css": "/search-book-react/static/css/main.ae5eec5c.css",
     "main.js": "/search-book-react/static/js/main.97120933.js",
     "static/js/787.231e7968.chunk.js": "/search-book-react/static/js/787.231e7968.chunk.js",
     "static/media/Inter-Bold.woff": "/search-book-react/static/media/Inter-Bold.8f8c5ea1d3a580b04e28.woff",
@@ -9,12 +9,12 @@
     "static/media/Inter-Regular.woff2": "/search-book-react/static/media/Inter-Regular.6fcad65b7a8f7ffabb8e.woff2",
     "static/media/header-bg.jpg": "/search-book-react/static/media/header-bg.e4f04fd51739b79b7b7e.jpg",
     "index.html": "/search-book-react/index.html",
-    "main.3c5af319.css.map": "/search-book-react/static/css/main.3c5af319.css.map",
+    "main.ae5eec5c.css.map": "/search-book-react/static/css/main.ae5eec5c.css.map",
     "main.97120933.js.map": "/search-book-react/static/js/main.97120933.js.map",
     "787.231e7968.chunk.js.map": "/search-book-react/static/js/787.231e7968.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3c5af319.css",
+    "static/css/main.ae5eec5c.css",
     "static/js/main.97120933.js"
   ]
 }
